@@ -10,11 +10,16 @@ a {
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: #1976d2;
+  background-color: #4CA755;
   color: white;
   font-weight: 600;
 
   img {
     margin: 0 16px;
+  }
+
+  svg {
+    color: white !important;
+    fill: white !important;
   }
 }
