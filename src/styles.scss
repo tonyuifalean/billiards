@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    // background-image: url('./assets/murano.jpg');
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+    // background-position: center;
+    // background-size: cover;
+}
+
+#darkLayer {
+    background-color: rgb(0, 0, 0, 0.3);
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Buttons styling */
+.btn-primary {
+    background-color: #1A6E54;
+    border-color: #1A6E54;
+
+    &:hover { 
+        background-color: #155843;
+        border-color: #155843;
+    }
+} 

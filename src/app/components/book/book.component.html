@@ -1,0 +1,64 @@
+<div class="col-md-6 offset-md-3 mt-5">
+  <div class="card">
+    <h4 class="card-header">Book</h4>
+    <div class="card-body">
+      <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="username">Name</label>
+          <input type="text" formControlName="username" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && formControls.username.errors }" />
+          <div *ngIf="submitted && formControls.username.errors" class="invalid-feedback">
+            <div *ngIf="formControls.username.errors.required">Username is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="tableNumber">Table number</label>
+          <select class="form-control" id="tableNumber">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="dateTime">Choose date</label>
+          <input 
+            type="text" 
+            id="dateTime"
+            class="form-control" 
+            bsDatepicker
+            [bsConfig]="{ isAnimated: true }">
+        </div>
+        <div class="form-group">
+            <label for="startTime">Start time</label>
+            <input 
+              type="number"
+              class="form-control"
+              id="startTime">
+        </div>
+        <div class="form-group">
+            <label for="endTime">End time</label>
+            <input 
+              type="number"
+              class="form-control"
+              id="endTime">
+        </div>
+        <div class="form-group">
+            <label for="couponCode">Coupon code</label>
+            <input type="text" id="couponCode" formControlName="couponCode" class="form-control" />
+          </div>
+        <button [disabled]="loading" class="btn btn-primary">
+          <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+          Submit
+        </button>
+        <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+      </form>
+    </div>
+  </div>
+</div>

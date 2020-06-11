@@ -1,5 +1,14 @@
 a {
-    cursor: pointer;
+  color: white;
+  cursor: pointer;
+
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+
+  &:hover {
+    border-bottom-color: #155843;
+    color: #155843;
+  }
 }
 
 .spacer {
@@ -10,7 +19,7 @@ a {
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: #4CA755;
+  background-color: transparent;
   color: white;
   font-weight: 600;
 
