@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header';
 import { HomeComponent } from './components/home';
 import { fakeBackendProvider, JwtInterceptor, ErrorInterceptor } from './helpers';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

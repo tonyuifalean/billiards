@@ -10,6 +10,8 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    const audio = document.querySelector('audio');
+    audio.play();
   }
 
 }

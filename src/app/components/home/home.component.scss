@@ -1,3 +1,44 @@
-#homeWrapper {
-    padding: 10px;
+.welcome-message {
+  background-color: rgba(26, 110, 84, 0.1);
+  height: 400px;
 }
+
+.roll-in {
+  animation: 2s ease-out 0s 1 rollIn;
+  height: 300px;
+  width: 300px;
+}
+
+.slide-left {
+  animation: 2s ease-out 0s 1 slideInFromRight;
+  text-align: center;
+}
+
+audio {
+  display: none;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rollIn {
+  0% { opacity: 1; transform: translateX(-100%) rotate(-360deg); }
+  100% { opacity: 1; transform: translateX(0px) rotate(0deg); } 
+} 

@@ -1,15 +1,28 @@
-<!-- Toolbar -->
-<div class="toolbar" role="banner">
-  <img width="40" alt="Billiards Logo" src="../../assets/logo.svg" />
-  <span>Amsterdam Biliards Club</span>
-  <div class="spacer"></div>
-
-  <!-- nav -->
-  <nav class="navbar navbar-expand" *ngIf="currentUser">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" routerLink="/">Home</a>
-      <a class="nav-item nav-link" routerLink="/book">Book</a>
-      <a class="nav-item nav-link" (click)="logout()">Logout</a>
+<div class="header-wrapper">
+  <div class="notification" *ngIf="showNotification">
+    <div class="content">
+        Black lives matter
+        <span class="close-button" (click)="onCloseClick()">X</span>
     </div>
-  </nav>
-</div>
+  </div>
+
+  <!-- Toolbar -->
+  <div class="toolbar" role="banner">
+    <img width="40" alt="Billiards Logo" src="../../assets/ball.png" />
+    <span>Amsterdam Biliards Club</span>
+    <div class="spacer"></div>
+
+    <!-- nav -->
+    <nav class="navbar navbar-expand" *ngIf="currentUser">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/">Home</a>
+        <a class="nav-item nav-link" routerLink="/photos">Photos</a>
+        <a class="nav-item nav-link" routerLink="/venue">Venue</a>
+        <a class="nav-item nav-link" routerLink="/parties">Parties</a>
+        <a class="nav-item nav-link" routerLink="/league">League</a>
+        <a class="nav-item nav-link" routerLink="/book">Book</a>
+        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+      </div>
+    </nav>
+  </div>
+</div>  

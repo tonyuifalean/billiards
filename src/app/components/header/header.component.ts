@@ -11,18 +11,25 @@ import { AuthenticationService } from '@app/services';
 export class HeaderComponent {
 
   public currentUser: User;
+  public showNotification: boolean;
 
   constructor(
     private router: Router,
     private authenticationService: AuthenticationService
   ) {
+    this.showNotification = true;
     this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
   }
 
-  logout() {
+  public logout() {
     this.authenticationService.logout();
     this.router.navigate(['/login']);
   }
 
+  public onCloseClick(): void {
+    this.showNotification = false;
+    const content = document.querySelector('.main-content');
+    content.classList.add('notification-removed');
+  }
 }
 

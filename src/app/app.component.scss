@@ -6,3 +6,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.main-content {
+  padding: 101px 15px 20px 15px;
+
+  &.notification-removed { 
+    padding-top: 60px;
+  }
+}
