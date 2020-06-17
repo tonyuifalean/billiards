@@ -2,7 +2,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+// import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,14 +23,14 @@ import { FooterComponent } from './components/footer/footer.component';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    BsDatepickerModule.forRoot()
+    // BsDatepickerModule.forRoot()
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 
     // provider used to create fake backend
-    // fakeBackendProvider
+    fakeBackendProvider
   ],
   bootstrap: [AppComponent]
 })

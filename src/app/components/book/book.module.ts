@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+// import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 import { BookComponent } from './book.component';
 import { BookRoutingModule } from './book-routing.module';
@@ -14,7 +14,7 @@ import { BookRoutingModule } from './book-routing.module';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    BsDatepickerModule,
+    // BsDatepickerModule,
     BookRoutingModule
   ]
 })
